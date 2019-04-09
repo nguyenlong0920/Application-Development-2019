@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include "screen.h"
 
 void barChart(int a[]){
 	int i, j;		// counter
+	setColors(YELLOW,bg(BLACK));
 	for(i = 0; i < 80; i++){// for 80 columns
 		for(j = 0; j < a[i]/3; j++){
 			printf("\033[%d;%dH", 35 - j, i + 1);

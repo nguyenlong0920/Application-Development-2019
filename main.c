@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <signal.h>
 #include <stdlib.h>
+#include <time.h>
 #include "screen.h"				//for user-defined header, use double quotes
 #include "sound.h"
 
@@ -12,7 +13,7 @@ int main(){
 		if (ret == SIGINT) break;
 		f = fopen("test.wav", "r");	// open this file for read only
 		clearScreen();
-		setColors(YELLOW,bg(BLUE));
+		setColors(YELLOW,bg(BLACK));
 		if (f == NULL){
 			printf("Cannot open the wav file\n");
 			return 1;
@@ -24,4 +25,6 @@ int main(){
 		displayWAVDATA(sd);
 		fclose(f);			// close the open file
 	}
+	resetColors();
+	getchar();
 }
