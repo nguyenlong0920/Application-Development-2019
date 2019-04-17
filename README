@@ -21,20 +21,27 @@ Table of content
 
 2. Installation instructions
 
-Firstly, insert SD card to Raspberry PI 3 . Secondly, connect RJ45 cable from
-Raspberry to internet.Initialize Raspberry. Then connect sound card to Raspberry.
-Connect microphone to sound card. Finally, connect USB cable from Raspberry to 5V
-power supply (PC or laptop). Make sure that you could receive IP address via email.
+2.1 Insert SD card to Raspberry PI 3 
+2.2 Connect RJ45 cable from Raspberry to internet.
+2.3 Initialize Raspberry. 
+2.4 Connect sound card to Raspberry.
+2.5 Connect microphone to sound card. 
+2.6 Connect USB cable from Raspberry to 5V power supply (PC or laptop). 
+    Make sure that you could receive IP address via email.
 
 3. Operating instructions
 
-Open Putty, enter IP address that you received via email into Putty. Enter username
-and password. Then go to file document of this application by using command "cd appdev"
-. Make file to compile the application by using command "make" .List all the file by using
-command "ls" to see file "sound.a". To run this application, use command "./sound.a", and 
-you would see the bar which is illustrated for the sound. Speak to the micrphone to record
-the sound. The duration of recording is 1 second. 8 pieces of data would be saved to file
-sound_log.txt . Stop recording by pressing Ctrl + C.
+3.1 Open Putty, enter IP address that you received via email into Putty. 
+3.2 Enter username and password. 
+3.3 Go to file document of this application by using command "cd appdev". 
+3.4 Make file to compile the application by using command "make".
+3.5 List all the file by using command "ls" to see file "sound.out". 
+3.6 To run this application, use command "./sound.out", 
+    and you would see the bar which is illustrated for the sound. 
+3.7 Speak to the micrphone to record the sound. 
+3.8 The duration of recording is 1 second. 
+    8 pieces of data would be saved to file sound_log.txt. 
+    Stop recording by pressing Ctrl + C.
 
 4. File manifest
 	4.1 main.c
