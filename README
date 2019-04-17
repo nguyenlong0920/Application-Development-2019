@@ -1,1 +1,60 @@
 # this is the first version
+This project is to turn a Rasberry PI as an audio device. The device is able to do 2 functions:
+as a sound collector and as a test-tone generator.
+
+Table of content
+	1. Configaration Instruction
+	2. Installation Instruction
+	3. Operating Inruction
+	4. File list (Manifest)
+	5. Copyright / Copyleft
+	6. Contact Information
+	7. Credits and Acknowledgements
+
+1. Configuration instructions
+
+- Raspberry PI 3 Mode B
+- USB sound card with microphone
+- RJ45 straight-through cable
+- SD card
+- USB cable
+
+2. Installation instructions
+
+Firstly, insert SD card to Raspberry PI 3 . Secondly, connect RJ45 cable from
+Raspberry to internet.Initialize Raspberry. Then connect sound card to Raspberry.
+Connect microphone to sound card. Finally, connect USB cable from Raspberry to 5V
+power supply (PC or laptop). Make sure that you could receive IP address via email.
+
+3. Operating instructions
+
+Open Putty, enter IP address that you received via email into Putty. Enter username
+and password. Then go to file document of this application by using command "cd appdev"
+. Make file to compile the application by using command "make" .List all the file by using
+command "ls" to see file "sound.a". To run this application, use command "./sound.a", and 
+you would see the bar which is illustrated for the sound. Speak to the micrphone to record
+the sound. The duration of recording is 1 second. 8 pieces of data would be saved to file
+sound_log.txt . Stop recording by pressing Ctrl + C.
+
+4. File manifest
+	4.1 main.c
+		The file which is the main file containning the functions of other .c file to run the program.
+	4.2 sound.c (included header files sound.h, comm.h, and screen.h)
+		Display information of WAVE file format and display .wav file data.
+	4.3 screen.c (included header files screen.h)
+		Display .wav file data in bar-diagram.
+	4.4 comm.c (included header file comm.h)
+		Send data to server.
+	4.5 makefile
+		Compile all the file.
+
+5. Copyright and license
+
+6. Contact information
+
+NGUYEN HOANG LONG
+Dept. of Information Technology
+Vaasa University of Applied Sciences
+Woffintie 30, 65100, Vaasa, Finland
+Home: http://www.cc.puv.fi/~e1800946
+email: e1800946@edu.vamk.fi
