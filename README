@@ -18,6 +18,7 @@ Table of content
 - RJ45 straight-through cable
 - SD card
 - USB cable
+- Internet connection
 
 2. Installation instructions
 
@@ -38,24 +39,39 @@ Table of content
 3.5 List all the file by using command "ls" to see file "sound.out". 
 3.6 To run this application, use command "./sound.out", 
     and you would see the bar which is illustrated for the sound. 
+    If the sound is higher than 70dB than the systerm will record as a peak.
 3.7 Speak to the micrphone to record the sound. 
-3.8 The duration of recording is 1 second. 
-    8 pieces of data would be saved to file sound_log.txt. 
-    Stop recording by pressing Ctrl + C.
+3.8 Use command "./sound.out 440" and select channels and duration 
+    to generate testTone.wav
+3.9 Use command "aplay testTone.wav" to hear the record.
 
 4. File manifest
-	4.1 main.c
-		The file which is the main file containning the functions of other .c file to run the program.
-	4.2 sound.c (included header files sound.h, comm.h, and screen.h)
-		Display information of WAVE file format and display .wav file data.
-	4.3 screen.c (included header files screen.h)
-		Display .wav file data in bar-diagram.
-	4.4 comm.c (included header file comm.h)
-		Send data to server.
-	4.5 makefile
-		Compile all the file.
+	a. main.c
+	This is the main, the operating file
+	b. sound.c
+	This is the file for extracting the information contended in a .wav file and calculation for dB
+	c. sound.h
+	This is the header file for sound.c. This file content the library, definition for constants
+	d. screen.c
+	This file is for displaying RMS values into bars on the screen.
+	e. screen.h
+	This is the header file for screen.c
+	f. comm.c
+	This file is the communication between the Raspberry Pi and the server which it sent RMS values to
+	g. comm.h
+	This is the header file for comm.c
+	h. makefile
+	This file contains the way of compilling and other menthods such as clean files or make .tar file
+	i. sound.php
+	This file is kept in the server so that the server can receive the RMS values
+
+	All of the source files can be download at: https://github.com/nguyenlong0920/Application-Development-2019
 
 5. Copyright and license
+
+Thanks for curl post menthod! The information can be found at: https://curl.haxx.se
+
+All the sources are free to use and distribute!
 
 6. Contact information
 
@@ -65,3 +81,9 @@ Vaasa University of Applied Sciences
 Woffintie 30, 65100, Vaasa, Finland
 Home: http://www.cc.puv.fi/~e1800946
 email: e1800946@edu.vamk.fi
+
+7. Credits and Acknowledge
+
+I want to say Thank you to my teacher Gao Chao who teach me this Application Developement cource.
+He has guilded me step by step and help me to correct all of my mistakes.
+Also he explained the lessons very details so that I can understand easily.
